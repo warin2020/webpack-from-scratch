@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true, // 不然只能import * as React from 'react'不能import React from 'react'
+    "module": "ES2015", // 文件引用编译成什么版本（比如CommonJS的require/module.exports还是EsModule的import/export）
+    "target": "ES5", // JS语法编译成什么版本（比如class编译成ES6的class还是ES5的function）
+    "moduleResolution": "node", // 让文件引用路径解析时知道要去node_modules里找
+    "jsx": "react", // jsx当做什么
+    "strict": true, // 严格模式（比如不允许null赋值给Object）
+    "allowJs": false, // 不允许有JS文件,
+    "sourceMap": true // .map文件
+  },
+  "include": [
+    "src/*"
+  ], // 包括哪些文件
+  "plugins": [
+    {
+      "name": "typescript-plugin-css-modules" // css modules需要这个插件
+    }
+  ]
+}
