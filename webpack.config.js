@@ -34,6 +34,9 @@ module.exports = {
     ],
   },
   devtool: prod ? false : 'source-map', // 开发模式开启source map
+  devServer: {
+    open: true, // 自动打开浏览器
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'index.html',
